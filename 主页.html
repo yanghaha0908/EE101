@@ -1,0 +1,132 @@
+<!--这是主搜索页-->
+
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Warship Search</title>
+    <style type="text/css">
+        h1 {
+            text-align: center;
+        }
+    </style>
+	<script src="/js/jquery-3.4.1.min.js" />
+	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <link type="text/css" rel="stylesheet" href="background.css">
+
+
+    <style>
+    .search_form{
+        width:602px;
+        height:42px;
+    }
+ 
+    /*左边输入框设置样式*/
+    .input_text{
+        width:400px;
+        height: 40px;
+        border:1px solid green;
+        /*清除掉默认的padding*/
+        padding:0px;
+        /*提示字首行缩进*/
+        text-indent: 10px;
+        /*去掉蓝色高亮框*/
+        outline: none;
+        /*用浮动解决内联元素错位及小间距的问题*/
+        float:left;
+    }
+ 
+    .input_sub{
+        width:100px;
+        height: 42px;
+        background: blue;
+        /*去掉submit按钮默认边框*/
+        border:0px;
+        /*改成右浮动也是可以的*/
+        float:left;
+        color:white;/*搜索的字体颜色为白色*/
+        cursor:pointer;/*鼠标变为小手*/
+    }
+    h1 {font-size:100px;}
+    img
+    {
+        height:90px;width:180px;
+        border-radius: 8px;
+     
+	
+	 /* 适用 IE8 及其更早版本 */
+    }
+
+    </style>
+
+    </head>
+<body>
+
+    <style> 
+    body 
+    {
+	    background-image:url("../a/1.jpg");  /*设置背景*/
+	    background-size: cover;
+    }
+    </style>
+
+    <br><br>
+    
+    <div align="center">
+
+    <h1> <span style="color:lightblue;">W</span><span style="color:lightcyan;">a</span><span style="color:orange;">r</span><span style="color:lightgoldenrodyellow;">s</span><span style="color:lightskyblue;">h</span><span style="color:lightcyan;">i</span><span style="color:lightgoldenrodyellow;">p</span>
+    </span></h1>
+    
+    <br><br>  
+        <!--制作搜索框-->
+        <form class="search_form" action="pageestest.php" method="GET" autocomplete="off">
+    <div class="search"> 
+        <input type="text" name="keywords" id="search_term" class="input_text" placeholder="请输入搜索内容">
+        <input type="submit" value="搜索" class="input_sub" id="search_button">
+    </div>
+        </form>
+    
+  
+   <br><br><br>
+   
+    <script>//实现定时切换 五个国家与五种军舰图片定时切换
+    
+    var curIndex=0;
+    var timeInterval=3000;
+    var arr1=new Array(); var arr2=new Array(); var arr3=new Array(); var arr4=new Array(); var arr5=new Array();
+    arr1[0]="../a/china.jpg"; arr2[0]="../a/ri.jpg"; arr3[0]="../a/usa.jpg";arr4[0]="../a/uk.jpg";arr5[0]="../a/e.jpg";
+    arr1[1]="../a/he.jpg";arr2[1]="../a/qu.jpg";arr3[1]="../a/hu.jpg";arr4[1]="../a/xun.jpg";arr5[1]="../a/hang.jpg";
+        
+    setInterval(changeImg,timeInterval);
+    function changeImg()
+    {
+        var obj=document.getElementById("obj");
+        if (curIndex==1)
+        {
+            curIndex=0;
+        }
+        else
+        {
+            curIndex=1;
+        }
+        obj1.src=arr1[curIndex];
+        obj2.src=arr2[curIndex];
+        obj3.src=arr3[curIndex];
+        obj4.src=arr4[curIndex];
+        obj5.src=arr5[curIndex];
+    }
+
+    
+    </script>
+    <a  href="c g.php" ><img id="obj1" src="../a/china.jpg" /> </a>
+    <a  href="ri g.php" ><img id="obj2" src="../a/ri.jpg" /> </a>
+    <a  href="us g.php" ><img id="obj3" src="../a/usa.jpg" /> </a>
+    <a  href="y g.php" ><img id="obj4" src="../a/uk.jpg" /> </a>
+    <a  href="e g.php" ><img id="obj5" src="../a/e.jpg" /> </a>
+    </div>
+</body>
+
+</html>
